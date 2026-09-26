@@ -1,0 +1,159 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFest 2026</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white text-center py-8 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-wide">
+            TECHFEST 2026
+        </h1>
+
+        <p class="text-lg mt-3 text-blue-200">
+            Annual Technical Festival
+        </p>
+
+        <p class="mt-2 text-sm">
+            Innovate • Create • Compete
+        </p>
+    </header>
+
+
+    <!-- Invitation Section -->
+    <section class="max-w-4xl mx-auto mt-10 px-6">
+        <div class="bg-white border-2 border-blue-200 rounded-2xl shadow-lg p-8 text-center">
+
+            <h2 class="text-3xl font-bold text-blue-900 mb-4">
+                You Are Invited!
+            </h2>
+
+            <p class="text-gray-600 leading-7">
+                Our college proudly invites all students and faculty members
+                to participate in our Annual Technical Festival.
+                Join us for an exciting celebration of technology,
+                creativity and innovation.
+            </p>
+
+            <div class="mt-6 border-t border-gray-200 pt-6">
+
+                <p class="font-semibold text-lg">
+                    📅 Date:
+                    <span class="text-blue-700">15 October 2026</span>
+                </p>
+
+                <p class="font-semibold text-lg mt-3">
+                    📍 Venue:
+                    <span class="text-blue-700">College Auditorium</span>
+                </p>
+
+                <p class="font-semibold text-lg mt-3">
+                    ⏰ Time:
+                    <span class="text-blue-700">10:00 AM onwards</span>
+                </p>
+
+            </div>
+
+            <!-- Button -->
+            <button
+                class="mt-8 bg-blue-700 hover:bg-blue-800 text-white
+                       font-semibold px-8 py-3 rounded-lg
+                       transition duration-300 shadow-md">
+                Register Now
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- Events Section -->
+    <section class="max-w-5xl mx-auto mt-12 px-6 pb-12">
+
+        <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">
+            Festival Highlights
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Event 1 -->
+            <div class="bg-white border border-blue-200 rounded-xl
+                        p-6 text-center shadow-md
+                        hover:shadow-xl transition">
+
+                <div class="text-4xl mb-3">💻</div>
+
+                <h3 class="text-xl font-bold text-blue-800">
+                    Coding Contest
+                </h3>
+
+                <p class="text-gray-600 mt-3">
+                    Test your programming skills and solve exciting
+                    real-world problems.
+                </p>
+            </div>
+
+
+            <!-- Event 2 -->
+            <div class="bg-white border border-purple-200 rounded-xl
+                        p-6 text-center shadow-md
+                        hover:shadow-xl transition">
+
+                <div class="text-4xl mb-3">🤖</div>
+
+                <h3 class="text-xl font-bold text-purple-800">
+                    Tech Exhibition
+                </h3>
+
+                <p class="text-gray-600 mt-3">
+                    Explore innovative projects and creative
+                    technological ideas.
+                </p>
+            </div>
+
+
+            <!-- Event 3 -->
+            <div class="bg-white border border-green-200 rounded-xl
+                        p-6 text-center shadow-md
+                        hover:shadow-xl transition">
+
+                <div class="text-4xl mb-3">🏆</div>
+
+                <h3 class="text-xl font-bold text-green-800">
+                    Quiz & Competitions
+                </h3>
+
+                <p class="text-gray-600 mt-3">
+                    Participate in exciting competitions and
+                    showcase your knowledge.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center py-5">
+
+        <p class="font-semibold">
+            Organized by Department of Computer Science & Engineering
+        </p>
+
+        <p class="text-blue-200 text-sm mt-2">
+            © 2026 TechFest | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
