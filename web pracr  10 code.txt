@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Calculator</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-4xl rounded-2xl shadow-xl overflow-hidden">
+
+        <!-- Header -->
+        <div class="bg-indigo-600 text-white text-center p-6">
+            <h1 class="text-3xl font-bold">
+                🎓 Student Grade Calculator
+            </h1>
+            <p class="mt-2">
+                Enter marks and calculate your result instantly
+            </p>
+        </div>
+
+        <div class="p-6">
+
+            <!-- Input Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                <div>
+                    <label class="block font-semibold mb-2">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter name"
+                        class="w-full border rounded-lg p-3
+                        focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-2">
+                        Java Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="java"
+                        placeholder="Out of 100"
+                        class="w-full border rounded-lg p-3
+                        focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-2">
+                        DSA Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="dsa"
+                        placeholder="Out of 100"
+                        class="w-full border rounded-lg p-3
+                        focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-2">
+                        Web Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="web"
+                        placeholder="Out of 100"
+                        class="w-full border rounded-lg p-3
+                        focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+            </div>
+
+            <!-- Button -->
+            <button
+                onclick="calculateGrade()"
+                class="w-full mt-6 bg-indigo-600 text-white
+                font-semibold py-3 rounded-lg
+                hover:bg-indigo-700 transition">
+                Calculate Result
+            </button>
+
+            <!-- Result -->
+            <div id="result"
+                class="hidden mt-6 bg-green-50 border border-green-300
+                rounded-xl p-6">
+
+                <h2 class="text-2xl font-bold text-green-700 mb-4">
+                    📊 Result
+                </h2>
+
+                <p id="studentResult"
+                   class="text-lg leading-8">
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center bg-gray-50 p-4 text-gray-500">
+            Keep learning and improving! 🌟
+        </div>
+
+    </div>
+
+    <script>
+
+        function calculateGrade() {
+
+            let name = document.getElementById("name").value.trim();
+
+            let java = Number(document.getElementById("java").value);
+            let dsa = Number(document.getElementById("dsa").value);
+            let web = Number(document.getElementById("web").value);
+
+            // Validation
+            if (name === "" ||
+                java < 0 || java > 100 ||
+                dsa < 0 || dsa > 100 ||
+                web < 0 || web > 100) {
+
+                alert("Please enter valid details and marks between 0 and 100.");
+                return;
+            }
+
+            // Calculate total and percentage
+            let total = java + dsa + web;
+            let percentage = (total / 300) * 100;
+
+            // Calculate grade
+            let grade;
+
+            if (percentage >= 90) {
+                grade = "A+";
+            }
+            else if (percentage >= 80) {
+                grade = "A";
+            }
+            else if (percentage >= 70) {
+                grade = "B";
+            }
+            else if (percentage >= 60) {
+                grade = "C";
+            }
+            else if (percentage >= 50) {
+                grade = "D";
+            }
+            else {
+                grade = "F";
+            }
+
+            // Display result
+            document.getElementById("studentResult").innerHTML =
+                "<strong>Student Name:</strong> " + name + "<br>" +
+                "<strong>Total Marks:</strong> " + total + " / 300<br>" +
+                "<strong>Percentage:</strong> " +
+                percentage.toFixed(2) + "%<br>" +
+                "<strong>Grade:</strong> " + grade;
+
+            document.getElementById("result")
+                .classList.remove("hidden");
+        }
+
+    </script>
+
+</body>
+</html>
